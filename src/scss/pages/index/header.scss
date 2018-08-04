@@ -185,6 +185,9 @@ ul.close-menu .menu-btn-open::before {
 }
 }
 @media (min-width: 783px) {
+  .big-wrapper {
+    box-shadow: 0px 0px 2px 2px #cecece;
+  }
   .menu-btn-close,.menu-btn-open {
     display: none;
   }
@@ -347,8 +350,10 @@ ul.close-menu .menu-btn-open::before {
 }
 @media (min-width: 1265px) {
   .big-wrapper {
+    height: 100%;
     width: 1250px;
     margin: 0 auto;
+    box-shadow: 0px 0px 2px 2px #cecece;
   }
   .main-navigation__list {
     padding: 0 100px;
