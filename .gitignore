@@ -1,0 +1,8 @@
+*.idea
+*.log
+*.pdf
+*.sublime*
+node_modules/
+npm-debug.*
+Thumbs.db
+*.directory
