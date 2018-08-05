@@ -4,6 +4,9 @@
   background-color: #f1f1f1;
   color: #000000;
 }
+.main-footer__logo {
+  display: none;
+}
 .social {
   list-style: none;
   padding: 25px 0;
@@ -152,7 +155,6 @@
   }
  .copyright {
    display: flex;
-   cursor: pointer;
    span {
       font-size: 19px;
       line-height: 20px;
@@ -161,14 +163,12 @@
       padding-top: 6px;
    }
   }
-  .copyright:hover svg {
+  .copyright__link:hover svg {
     fill: #46c1ae;
   }
-  .copyright:active {
+  .copyright__link:active svg {
+    fill: #46c1ae;
     opacity: 0.3;
-  }
-  .copyright:active svg {
-    fill: #46c1ae;
   }
  
   .copyright__link {
