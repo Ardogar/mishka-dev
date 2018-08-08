@@ -113,8 +113,10 @@ ul.main-navigation__list .main-navigation__item--active {
   clip-path: none;
   clip: auto;
   overflow: visible;
+  
   .main-navigation__link {
     cursor: default;
+    color: #62d1ba;
   }
   .main-navigation__link:hover img,p{
     opacity: 1;
@@ -247,7 +249,9 @@ ul.close-menu .menu-btn-open::before {
     cursor: default;
     p {
       cursor: default;
+      color: #62d1ba;
     }
+    
   }
   .main-navigation__item--active:hover p{
     opacity: 1;

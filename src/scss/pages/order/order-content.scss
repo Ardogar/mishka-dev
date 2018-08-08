@@ -54,6 +54,13 @@
     padding-top: 36px;
     padding-bottom: 40px;
   }
+  .input-wrapper--contacts {
+    padding-top: 5px;
+  }
+  .input-wrapper--info {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
   .radio-wrapper {
     margin: 0;
     margin-bottom: 44px;
@@ -187,6 +194,22 @@
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #ffffff;
   }
+  .lb-eml,.lb-ph {
+    position: relative;
+    display: block;
+  }
+  .lb-eml svg {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -16px;
+  }
+  .lb-ph svg {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -12.5px;
+  }
   .input-text-wrapper input:hover {
     border-color: #62d1ba;
   }
@@ -239,62 +262,28 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-  .phone-input-icon {
-    position: relative;
-  }  
-  .input-phone:hover + svg {
+  .lb-eml:hover input {
+    border-color: #62d1ba;
+  }
+  .lb-ph:hover input {
+    border-color: #62d1ba;
+  }
+  .lb-eml:active input{
+    border-color: #62d1ba;
+  }
+  .lb-ph:active input{
+    border-color: #62d1ba;
+  }
+  .lb-eml:hover svg {
+    fill:#62d1ba;
+    opacity: 1;
+  } 
+  .lb-ph:hover svg{
     fill: #62d1ba;
     opacity: 1;
   }
-  .input-phone:active + svg {
-    fill: #62d1ba;
-    opacity: 1;
-  }
-  .input-phone:focus + svg {
-    fill: #62d1ba;
-    opacity: 1;
-  }
-  
-  .phone-input-icon svg {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    margin-top: -12.5px;
+  .lb-eml svg,.lb-ph svg {
     opacity: 0.2;
-  }
-  .email-input-icon {
-    position: relative;
-  }
-  .email-input-icon svg {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    margin-top: -16px;
-    opacity: 0.2;
-  }
-  .input-email:hover + svg {
-    fill: #62d1ba;
-    opacity: 1;
-  }
-  .input-email:active + svg {
-    fill: #62d1ba;
-    opacity: 1;
-  }
-  .input-email:focus + svg {
-    fill: #62d1ba;
-    opacity: 1;
-  }
-  .phone-input-icon svg:hover {
-    fill: #62d1ba;
-    opacity: 1;
-  }
-  .email-input-icon svg:hover {
-    fill: #62d1ba;
-    opacity: 1;
   }
 }
 @media (min-width: 783px) {
@@ -314,11 +303,10 @@
   .form-order-wrapper {
     padding: 86px 0 50px 0;
     margin-top: -15px;
-    background-color: #ffffff;
     color: #000000;
     background-image: url("../img/bg-zigzag-fill.svg");
-    background-repeat: no-repeat;
     background-position: top;
+    background-repeat: no-repeat;
     background-size: contain;
   }
   .order__text {
@@ -327,20 +315,28 @@
     font-weight: 400;
     color: #444444;
     margin: 0;
+    margin-left: 6.5%;
+    margin-right: 6.5%;
     margin-bottom: 72px;
   }
   .type-order-wrapper {
     box-sizing: border-box;
     width: 100%;
-    padding-top: 64px;
-    padding-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
     padding-left: 6.5%;
     padding-right: 6.5%;
     display: flex;
     flex-wrap: wrap;
   }
-  .text-input-group {
-    padding-top: 50px;
+  .type-order-wrapper--color {
+    background-color: #f1f1f1;
+  }
+  .type-order-wrapper--position {
+    padding-bottom: 0;
+  }
+  .type-order-wrapper:first-child {
+    padding-top: 0;
   }
   .name-type {
     margin: 0;
@@ -428,7 +424,7 @@
     width: 46px;
     height: 46px;
     border: 2px solid #444444;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     top: 50%;
     left: 0;
     margin-top: -20px;
@@ -463,13 +459,28 @@
     width: 100%;
     margin: 0;
     margin-bottom: 24px;
+    position: relative;
     label {
       width: 100%;
       display: flex;
     }
   }
   .input-text-wrapper:last-child {
-    margin-bottom: 50px;
+    margin-bottom: 0;
+  }
+  .input-text-wrapper--position:first-child {
+    margin-bottom: 24px;
+  }
+  .input-text-wrapper svg {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+  }
+  .lb-ph svg {
+    margin-top: -12.5px;
+  }
+  .lb-eml svg {
+    margin-top: -16px;
   }
   .input-text-name {
     width: 25%;
@@ -479,9 +490,7 @@
     font-weight: 700;
     color: #000000;
   }
-  .text-input-name {
-    padding-top: 16px;
-  }
+  
   .input-text-wrapper input {
     width: 75%;
     padding: 15px 8px;
@@ -495,6 +504,9 @@
     font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #ffffff;
   }
+  .type-order-wrapper--color input {
+    background-color: #f1f1f1;
+  }
   .input-text-wrapper input[type="tel"],.input-text-wrapper input[type="email"] {
     width: 100%;
   }
@@ -507,17 +519,28 @@
   .input-text-wrapper input:focus {
     border-color: #62d1ba;
   }
-  .contacts-input-wrapper {
-    width: 75%;
+  .lb-eml:hover input {
+    border-color: #62d1ba;
   }
-  .contacts-input-wrapper .input-text-wrapper:last-child {
-    margin-bottom: 24px;
+  .lb-ph:hover input {
+    border-color: #62d1ba;
   }
-  .type-order-wrapper--gray {
-    padding-bottom: 26px;
+  .lb-eml:active input{
+    border-color: #62d1ba;
   }
-  .lust {
-    margin-bottom: 50px;
+  .lb-ph:active input{
+    border-color: #62d1ba;
+  }
+  .lb-eml:hover svg {
+    fill:#62d1ba;
+    opacity: 1;
+  } 
+  .lb-ph:hover svg{
+    fill: #62d1ba;
+    opacity: 1;
+  }
+  .lb-eml svg,.lb-ph svg {
+    opacity: 0.2;
   }
   .input-wrapper textarea {
     resize: none;
@@ -545,6 +568,7 @@
     border-color: #62d1ba;
   }
   .order-bottom-block {
+    padding: 0 6.5%;
     display: flex;
     justify-content: space-between;
   }
@@ -554,49 +578,66 @@
     line-height: 30px;
     color: #444444;
   }
-  .phone-input-icon {
-    position: relative;
-  }  
-  .phone-input-icon svg {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    margin-top: -12.5px;
-    opacity: 0.2;
+} 
+@media (min-width: 1265px) {
+  .order-top-block {
+    padding: 37px 100px 106px 100px;
+  }    
+  .order__title {
+    font-size: 53px;
+    line-height: 57px;
+    font-weight: 700;
+    color: #000000;
   }
-  .email-input-icon {
-    position: relative;
+  .form-order-wrapper {
+    padding: 106px 0 50px 0;
   }
-  .email-input-icon svg {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    top: 50%;
-    right: 8px;
-    margin-top: -16px;
-    opacity: 0.2;
+  .order__text {
+    margin-left: 225px;
+    margin-right: 225px;
   }
-  
-  .lb-ph:hover svg{
-    fill: #62d1ba;
-    opacity: 1;
+  .type-order-wrapper {
+    width: 1250px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
-  .lb-ph:hover input {
-    border-color: #62d1ba;
+  .name-type {
+    width: 175px;
   }
-  .lb-eml:hover svg {
-    fill: #62d1ba;
-    opacity: 1;
+  .input-wrapper {
+    width: 875px;
   }
-  .lb-eml:hover input {
-    border-color: #62d1ba;
+  .radio-wrapper {
+    width: 357px;
+
   }
-  .gray {
-    background-color: #f1f1f1;
+  .checkbox-wrapper {
+    width: 220px;
+    margin-right: 40px;
   }
-  input.input-phone,input.input-email {
-    background-color: #f1f1f1;
+  .input-text-wrapper {
+    width: 875px;
+  }
+  .input-text-name {
+    width: 175px;
+  }
+  .input-text-wrapper input {
+    width: 525px;
+  }
+  .input-text-wrapper input[type="tel"],.input-text-wrapper input[type="email"] {
+    width: 700px;
+  }
+  .input-wrapper--contacts {
+    width: 725px;
+    margin-right: 150px;
+  }
+  .input-text-wrapper--contacts {
+    width: 725px;
+  }
+  .input-wrapper textarea {
+    width: 725px;
+  }
+  .order-bottom-block {
+    padding: 0 100px;
   }
 }

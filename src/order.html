@@ -92,32 +92,32 @@
           </h1>
         </div>
         <div class="form-order-wrapper">
+          <p class="order__text">
+            Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+          </p>
           <form action="https://echo.htmlacademy.ru">
-            <p class="order__text">
-              Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
-            </p>
-            <div class="type-order-wrapper">
+            <div class="type-order-wrapper type-order-wrapper--position">
               <p class="name-type">
                 <span>ТИП</span>
               </p>
               <div class="input-wrapper">
                 <p class="radio-wrapper">
                   <label for="acces-radio">
-                    <input class="visually-hidden" type="radio" name="type" id="acces-radio">
+                    <input class="visually-hidden" type="radio" name="type-goods" id="acces-radio">
                     <span class="radio-indicator"></span>
                     Аксессуар для интерьера
                   </label>
                 </p>
                 <p class="radio-wrapper">
                   <label for="toy-radio">
-                    <input class="visually-hidden" type="radio" name="type" id="toy-radio">
+                    <input class="visually-hidden" type="radio" name="type-goods" id="toy-radio">
                     <span class="radio-indicator"></span>
                     Детская игрушка
                   </label>
                 </p>
               </div>
             </div>
-            <div class="type-order-wrapper gray">
+            <div class="type-order-wrapper type-order-wrapper--position type-order-wrapper--color">
               <p class="name-type">
                 <span>ЦВЕТ</span>
               </p>
@@ -190,8 +190,8 @@
                 </p>
               </div>
             </div>
-            <div class="type-order-wrapper text-input-group">
-              <p class="name-type text-input-name">
+            <div class="type-order-wrapper">
+              <p class="name-type">
                 <span>ФИО</span>
               </p>
               <div class="input-wrapper">
@@ -221,12 +221,12 @@
                 </p>
               </div>
             </div>
-            <div class="type-order-wrapper gray text-input-group">
-              <p class="name-type text-input-name">
+            <div class="type-order-wrapper type-order-wrapper--color ">
+              <p class="name-type">
                 <span>ТЕЛ</span>
               </p>
-              <div class="input-wrapper">
-                <p class="input-text-wrapper phone-input-icon">
+              <div class="input-wrapper input-wrapper--contacts">
+                <p class="input-text-wrapper input-text-wrapper--position input-text-wrapper--contacts">
                   <label class="lb-ph" for="phn">
                     <input class="input-phone" type="tel" name="phone" id="phn" placeholder="+7 ХХХ ХХ ХХ*">
                     <svg width="25" height="25">
@@ -235,11 +235,11 @@
                   </label>
                 </p>
               </div>
-              <p class="name-type text-input-name">
+              <p class="name-type">
                 <span>E-mail</span>
               </p>
-              <div class="input-wrapper ">
-                <p class="input-text-wrapper email-input-icon contacts-input-wrapper">
+              <div class="input-wrapper input-wrapper--contacts">
+                <p class="input-text-wrapper input-text-wrapper--contacts">
                   <label class="lb-eml" for="eml">
                     <input class="input-email" type="email" name="email" id="eml" placeholder="Ваш Email*">
                     <svg width="32" height="32">
@@ -249,11 +249,11 @@
                 </p>
               </div>
             </div>
-            <div class="type-order-wrapper text-input-group lust">
+            <div class="type-order-wrapper">
               <p class="name-type">
                 <span>ДОП</span>
               </p>
-              <div class="input-wrapper input-textarea-wrapper">
+              <div class="input-wrapper input-wrapper--info">
                 <textarea name="other-info" id="" cols="30" rows="10" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </div>
             </div>
