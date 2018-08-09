@@ -95,7 +95,7 @@
           <p class="order__text">
             Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
-          <form action="https://echo.htmlacademy.ru">
+          <form action="https://echo.htmlacademy.ru" method="POST">
             <div class="type-order-wrapper type-order-wrapper--position">
               <p class="name-type">
                 <span>ТИП</span>
@@ -103,14 +103,14 @@
               <div class="input-wrapper">
                 <p class="radio-wrapper">
                   <label for="acces-radio">
-                    <input class="visually-hidden" type="radio" name="type-goods" id="acces-radio">
+                    <input class="visually-hidden" type="radio" name="type-goods" value="accessory-decor" id="acces-radio">
                     <span class="radio-indicator"></span>
                     Аксессуар для интерьера
                   </label>
                 </p>
                 <p class="radio-wrapper">
                   <label for="toy-radio">
-                    <input class="visually-hidden" type="radio" name="type-goods" id="toy-radio">
+                    <input class="visually-hidden" type="radio" name="type-goods" value="children-toy" id="toy-radio">
                     <span class="radio-indicator"></span>
                     Детская игрушка
                   </label>
@@ -124,7 +124,7 @@
               <div class="input-wrapper">
                 <p class="checkbox-wrapper">
                   <label for="wi">
-                    <input class="visually-hidden" type="checkbox" name="checkbox-color-1" id="wi">
+                    <input class="visually-hidden" type="checkbox" value="white" name="color-1" id="wi">
                     <span class="checkbox-indicator">
                       <svg width="22" height="16">
                         <use xlink:href="#icon-tick"></use>
@@ -135,7 +135,7 @@
                 </p>
                 <p class="checkbox-wrapper">
                   <label for="gr">
-                    <input class="visually-hidden" type="checkbox" name="checkbox-color-2" id="gr">
+                    <input class="visually-hidden" type="checkbox" value="gray" name="color-2" id="gr">
                     <span class="checkbox-indicator">
                       <svg width="22" height="16">
                         <use xlink:href="#icon-tick"></use>
@@ -146,7 +146,7 @@
                 </p>
                 <p class="checkbox-wrapper">
                   <label for="tif">
-                    <input class="visually-hidden" type="checkbox" name="checkbox-color-3" id="tif">
+                    <input class="visually-hidden" type="checkbox" value="Tiffany" name="color-3" id="tif">
                     <span class="checkbox-indicator">
                       <svg width="22" height="16">
                         <use xlink:href="#icon-tick"></use>
@@ -157,7 +157,7 @@
                 </p>
                 <p class="checkbox-wrapper">
                   <label for="bl">
-                    <input class="visually-hidden" type="checkbox" name="checkbox-color-4" id="bl">
+                    <input class="visually-hidden" type="checkbox" value="black" name="color-4" id="bl">
                     <span class="checkbox-indicator">
                       <svg width="22" height="16">
                         <use xlink:href="#icon-tick"></use>
@@ -168,7 +168,7 @@
                 </p>
                 <p class="checkbox-wrapper">
                   <label for="pn">
-                    <input class="visually-hidden" type="checkbox" name="checkbox-color-5" id="pn">
+                    <input class="visually-hidden" type="checkbox" value="pink" name="color-5" id="pn">
                     <span class="checkbox-indicator">
                       <svg width="22" height="16">
                         <use xlink:href="#icon-tick"></use>
@@ -179,7 +179,7 @@
                 </p>
                 <p class="checkbox-wrapper">
                   <label for="or">
-                    <input class="visually-hidden" type="checkbox" name="checkbox-color-6" id="or">
+                    <input class="visually-hidden" type="checkbox" value="orange" name="color-6" id="or">
                     <span class="checkbox-indicator">
                       <svg width="22" height="16">
                         <use xlink:href="#icon-tick"></use>
@@ -216,7 +216,7 @@
                     <span class="input-text-name">
                       Отчество:
                     </span>
-                    <input type="text" name="patronymic" id="name-3" placeholder="Отчество, если желаете">
+                    <input type="text" name="middle-name" id="name-3" placeholder="Отчество, если желаете">
                   </label>
                 </p>
               </div>
@@ -228,7 +228,7 @@
               <div class="input-wrapper input-wrapper--contacts">
                 <p class="input-text-wrapper input-text-wrapper--position input-text-wrapper--contacts">
                   <label class="lb-ph" for="phn">
-                    <input class="input-phone" type="tel" name="phone" id="phn" placeholder="+7 ХХХ ХХ ХХ*">
+                    <input class="input-phone" type="tel" name="phone" id="phn" placeholder="+375 (XX) XXX-XX-XX">
                     <svg width="25" height="25">
                       <use xlink:href="#icon-phone"></use>
                     </svg>
