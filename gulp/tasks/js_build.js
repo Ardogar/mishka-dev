@@ -3,6 +3,7 @@
 module.exports = function() {
   $.gulp.task("js", function() {
     return $.gulp.src("./src/js/**/*.js")
+    .pipe($.gp.plumber())
     .pipe($.gp.sourcemaps.init())
       .pipe($.gp.uglify())
       .pipe($.gp.rename({

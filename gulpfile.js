@@ -47,10 +47,11 @@ $.gulp.task('build', $.gulp.series(
   $.gulp.parallel(
     'html',
     'scss',
-    'js',
     'copy'
   ),
-  
+  $.gulp.parallel(
+    'js'
+  ),
   $.gulp.parallel(
     'serv',
     'watch'
