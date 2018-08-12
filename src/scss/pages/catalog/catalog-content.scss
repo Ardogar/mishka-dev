@@ -62,19 +62,27 @@
     line-height: 24px;
     font-weight: 700;
     margin: 0;
+    padding: 13px 0;
   }
   .buy-goods {
     font-size: 0;
     line-height: 0;
     border: 0;
     background-color: transparent;
-    width: 20px;
-    height: 19px;
+    width: 59px;
+    height: 50px;
+    position: relative;
     margin: 0;
     padding: 0;
     cursor: pointer;
     svg {
-      margin-top: 2px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 20px;
+      height: 19px;
+      margin-top: -10px;
+      margin-left: -10px;
       opacity: 0.2;
     }
   }
@@ -271,25 +279,31 @@
     font-weight: 700;
     color: #000000;
     margin: 0;
+    padding: 13px 0;
   }
   .buy-goods {
-    min-width: 35px;
-    min-height: 35px;
+    min-width: 50px;
+    min-height: 50px;
     padding: 0;
     font-size: 0;
     line-height: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
     svg {
-      width: 21px;
-      height: 18px;
+      position: absolute;
+      width: 20px;
+      height: 19px;
       top: 50%;
-      left: 50%;
-      margin-bottom: -2px;
-      margin-left: 8.5px;
+      left: 15px;
+      margin-top: -10px;
       opacity: 0.2;
-      margin-right: 8px;
+    }
+    span {
+      padding-left: 50px;
     }
   } 
   .buy-goods:hover {
@@ -309,9 +323,8 @@
     fill: #63d1bb;
     opacity: 0.3;
   }
-  @media (min-width: 950px) and (max-width: 1265px) {
+  @media (min-width: 950px) {
     .buy-goods {
-      width: auto;
       font-size: 17px;
       line-height: 24px;
     }

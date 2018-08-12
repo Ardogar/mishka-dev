@@ -29,19 +29,22 @@ function checkInput() {
   var inputFirstName = orderForm.elements['first-name'];
   var inputSurname = orderForm.elements.surname;
   var writeBtn = document.querySelector('.push-order');
-  var inputPhone = orderForm.elements.phone.value;
-  var arrValue = [];
-  var firstNum = [];
+  var inputPhone = orderForm.elements.phone;
+  var inputEmail = orderForm.elements.email;
 
   
   
   writeBtn.addEventListener('click', function(evt){
-     for(var i = 0; i < inputPhone.length; i++ ) {
-      if(isNaN(parseFloat(inputPhone[i])) && isFinite(inputPhone[i])) {
-         arrValue.push(inputPhone[i])
+    var inputPhoneValue = inputPhone.value.split('');
+    var inputEmailValue = inputEmail.value.split('')
+    var arrValue = [];
+    var firstNum = [];
+
+     for(var i = 0; i < inputPhoneValue.length; i++ ) {
+      if(!isNaN(parseFloat(inputPhoneValue[i])) && isFinite(inputPhoneValue[i])) {
+         arrValue.push(inputPhoneValue[i])
       }
     }
-    console.log(arrValue);
     for(var j = 0; j < 3; j++) {
       firstNum.push(arrValue[j]);
     };
@@ -65,31 +68,47 @@ function checkInput() {
         document.body.removeChild(altModal);
       },1500); 
       return;
-    };
-    if(firstNum.join('') !== '375') {
+    }else if(firstNum.join('') !== '375') {
       evt.preventDefault();
+      inputPhone.style.borderColor='red';
       customAlert('Номер должен начинаться с "+375"');
       setTimeout(function(){
+        inputPhone.removeAttribute('style');
         var altModal = document.querySelector('.alert-modal');
         document.body.removeChild(altModal);
       },1500);
       return;
     } else if(arrValue.length < 12) {
       evt.preventDefault();
+      inputPhone.style.borderColor='red';
       customAlert('Номер слишком короткий!');
       setTimeout(function(){
+        inputPhone.removeAttribute('style');
         var altModal = document.querySelector('.alert-modal');
         document.body.removeChild(altModal);
       },1500);
       return;
     }else if(arrValue.length > 12) {
       evt.preventDefault();
+      inputPhone.style.borderColor='red';
       customAlert('Перебор! Слишком длинный номер.');
       setTimeout(function(){
+        inputPhone.removeAttribute('style');
         var altModal = document.querySelector('.alert-modal');
         document.body.removeChild(altModal);
       },1500);
-  }
+    }
+    for(var k = 0; k < inputEmailValue.length; k++) {
+      if(inputEmailValue[k] !== '@') {
+        inputEmail.style.borderColor='red';
+        customAlert('Не правильно указан email');
+        setTimeout(function(){
+          inputEmail.removeAttribute('style');
+          var altModal = document.querySelector('.alert-modal');
+          document.body.removeChild(altModal);
+        },1500);
+      }
+    }
   
   function checkInputValue(n) {
     if(n == '' || n == ' ') {
