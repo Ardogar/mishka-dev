@@ -1,27 +1,6 @@
 'use strict'
 
 
-function checkAttribute() {
-  var mainNavigation = document.querySelector('.main-navigation__list');
-  var arr = mainNavigation.classList;
-  var closeMenu = document.querySelector('.menu-btn-close');
-  var openMenu = document.querySelector('.menu-btn-open');
-  
-
-  for(var i = 0; i < arr.length; i++) {
-    if (arr[i] !== 'close-menu') {
-      mainNavigation.classList.add('close-menu')
-    }
-  }
-  openMenu.addEventListener('click', function() {
-    mainNavigation.classList.remove('close-menu');
-  });
-  closeMenu.addEventListener('click', function(){
-    mainNavigation.classList.add('close-menu');
-  });
-}  
-
-checkAttribute();
 
 
 function checkInput() {
@@ -30,15 +9,17 @@ function checkInput() {
   var inputSurname = orderForm.elements.surname;
   var writeBtn = document.querySelector('.push-order');
   var inputPhone = orderForm.elements.phone;
-  var inputEmail = orderForm.elements.email;
+  // var inputEmail = orderForm.elements.email;
 
   
   
   writeBtn.addEventListener('click', function(evt){
     var inputPhoneValue = inputPhone.value.split('');
-    var inputEmailValue = inputEmail.value.split('')
+    // var inputEmailValue = inputEmail.value.split('')
     var arrValue = [];
     var firstNum = [];
+    // var inputEmailCheck;
+    
 
      for(var i = 0; i < inputPhoneValue.length; i++ ) {
       if(!isNaN(parseFloat(inputPhoneValue[i])) && isFinite(inputPhoneValue[i])) {
@@ -97,18 +78,24 @@ function checkInput() {
         var altModal = document.querySelector('.alert-modal');
         document.body.removeChild(altModal);
       },1500);
+      return;
     }
-    for(var k = 0; k < inputEmailValue.length; k++) {
-      if(inputEmailValue[k] !== '@') {
-        inputEmail.style.borderColor='red';
-        customAlert('Не правильно указан email');
-        setTimeout(function(){
-          inputEmail.removeAttribute('style');
-          var altModal = document.querySelector('.alert-modal');
-          document.body.removeChild(altModal);
-        },1500);
-      }
-    }
+    // for(var k = 0; k < inputEmailValue.length; k++) {
+    //   if (inputEmailValue[k] == '@') {
+    //     inputEmailCheck = inputEmailValue[k];
+    //   }
+    // }
+    // if(inputEmailCheck !== '@') {
+    //   evt.preventDefault();
+    //   inputEmail.style.borderColor='red';
+    //   customAlert('Не правильно указан email');
+    //   setTimeout(function(){
+    //     inputEmail.removeAttribute('style');
+    //     var altModal = document.querySelector('.alert-modal');
+    //     document.body.removeChild(altModal);
+    //   },1500);
+    //   return;
+    // }
   
   function checkInputValue(n) {
     if(n == '' || n == ' ') {
@@ -131,7 +118,7 @@ function customAlert(text) {
   alt.style.top='50%';
   alt.style.left='50%';
   alt.style.marginTop='-50px';
-  alt.style.marginLeft='-130px'
+  alt.style.marginLeft='-135px'
   alt.style.backgroundColor='#ffffff';
   alt.style.textAlign='center';
   alt.style.zIndex='60';

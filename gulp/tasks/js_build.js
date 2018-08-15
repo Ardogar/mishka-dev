@@ -5,12 +5,11 @@ module.exports = function() {
     return $.gulp.src("./src/js/**/*.js")
     .pipe($.gp.plumber())
     .pipe($.gp.sourcemaps.init())
+      .pipe($.gp.concat('all.js'))
       .pipe($.gp.uglify())
-      .pipe($.gp.rename({
-        suffix: ".min"
-      }))
-      .pipe($.gp.sourcemaps.write())
-      .pipe($.gulp.dest("./build/js"))
-      .pipe($.browserSync.stream());
+      .pipe($.gp.rename("main.min.js"))
+    .pipe($.gp.sourcemaps.write())
+    .pipe($.gulp.dest("./build/js"))
+    .pipe($.browserSync.stream())
   });
 }

@@ -293,6 +293,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    color: #000000;
     svg {
       position: absolute;
       width: 20px;
@@ -304,11 +305,12 @@
     }
     span {
       padding-left: 50px;
+      
     }
   } 
   .buy-goods:hover {
     background-color: transparent;
-    color: #000000;
+    color: rgba(#000000, 0.8);
   }
   .buy-goods:active {
     background-color: transparent;

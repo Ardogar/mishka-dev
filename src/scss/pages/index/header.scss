@@ -40,6 +40,9 @@
 .main-navigation__link:active svg {
   opacity: 0.3;
 }
+.search-item {
+  position: relative;
+}
 .search-link {
   position: relative;
 }
@@ -51,8 +54,65 @@
   left: 30px;
   margin-top: -9px;
   opacity: 0.2;
+}
+.search-modal {
+  width: 320px;
+  height: 78px;
+  border: 2px solid #63d1bb;
+  bottom: 0;
+  right: 0;
+  padding-right: 50px;
+  box-sizing: border-box;
+  position: relative;
+}
+.search-btn {
+  width: 50px;
+  height: 74px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  svg {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 50%;
+    right: 15px;
+    margin-top: -9px;
+    fill: #63d1bb;
+    cursor: pointer;
   }
-
+  svg:hover {
+    opacity: 0.6;
+  }
+}
+.search-input {
+  font-size: 17px;
+  line-height: 24px;
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 25px 10px;
+  width: 270px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  outline: none;
+}
+.visually .search-modal {
+  position: absolute;
+      
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .cart-link {
   position: relative;
   p {
@@ -296,6 +356,67 @@ ul.close-menu .menu-btn-open::before {
   }
   .search-link {
     width: 50px;
+  }
+  .search-modal {
+    width: 320px;
+    height: 78px;
+    border: 2px solid #63d1bb;
+    bottom: -78px;
+    right: 0;
+    padding-right: 50px;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 90;
+    background-color: #ffffff;
+    
+  }
+  .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 74px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    svg {
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      top: 50%;
+      right: 15px;
+      margin-top: -9px;
+      fill: #63d1bb;
+      cursor: pointer;
+    }
+    svg:hover {
+      opacity: 0.6;
+    }
+  }
+  .search-input {
+    font-size: 17px;
+    line-height: 24px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 25px 10px;
+    width: 270px;
+    border: none;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    outline: none;
+  }
+  .visually .search-modal {
+    position: absolute;
+        
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
   @media (min-width: 950px) {
     p.cart-link__name {
